@@ -1,6 +1,6 @@
 +++
 <div style="float:left">18 第 1 章　JavaScript简史</div><div style="float:right">Aug 06, 2021</div>
-> Netscape Navigator 4发布于1997年6月，IE 4发布于同年10月。这两种浏览器都对它们的早期版本进
+Netscape Navigator 4发布于1997年6月，IE 4发布于同年10月。这两种浏览器都对它们的早期版本进
 行了许多改进，大幅扩展了DOM，使能够通过JavaScript完成的功能大大增加。而网页设计人员也开始
 接触到一个新名词：DHTML。
 
