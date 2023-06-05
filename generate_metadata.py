@@ -25,6 +25,9 @@ def generate_metadata(file_path):
 
     file_name = os.path.basename(file_path)
     date, title = file_name.split("-", 2)[0:2]
+    if len(file_name.split("-")) < 3:
+        print(f"Skipping {file_path} (file_name not fixed)")
+        return
 
     with open(file_path, "r") as file:
         content = file.read()
