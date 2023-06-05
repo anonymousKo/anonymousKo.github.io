@@ -1,0 +1,27 @@
+name: Generate Metadata
+on:
+  push:
+    branches:
+      - main  # Replace with your branch name
+  pull_request:
+    branches:
+      - main  # Replace with your branch name
+
+jobs:
+  generate-metadata:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x  # Replace with the desired Python version
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt  # Replace with your dependencies if any
+
+      - name: Generate Metadata
+        run: python generate_metadata.py  # Replace with the script name or command to generate metadata
