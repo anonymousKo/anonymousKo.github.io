@@ -24,10 +24,8 @@ def generate_metadata(file_path):
         return
 
     file_name = os.path.basename(file_path)
-    file_parts = file_name.split("-", 2)
-    if len(file_parts) >= 2:
-        date = file_parts[0]
-        title = file_parts[1]
+    if len(file_name) >= 12 and file_name[4] == "-" and file_name[7] == "-":
+        date, title = file_name.split("-", 2)[0:2]
     else:
         print(f"Skipping {file_path} (file_name not fixed)")
         return
