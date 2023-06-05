@@ -26,8 +26,3 @@ jobs:
       - name: Generate Metadata
         run: python generate_metadata.py  # Replace with the script name or command to generate metadata
         
-      - name: Commit Changes
-        run: |
-          git add <path-to-edited-file>
-          git commit -m "Update metadata for <file>"
-          git push
