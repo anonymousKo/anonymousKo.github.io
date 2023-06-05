@@ -15,7 +15,7 @@ def has_metadata(file_path):
     try:
         frontmatter.load(content)
         return True
-    except frontmatter.exceptions.InvalidFrontmatterError:
+    except frontmatter.ParseError:
         return False
 
 def generate_metadata(file_path):
