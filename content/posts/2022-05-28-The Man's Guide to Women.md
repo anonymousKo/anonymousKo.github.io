@@ -1,3 +1,8 @@
+---
+title: The Man's Guide to Women
+date: 2022-05-28
+---
+
 
 ## 《爱的沟通》
 作者 *约翰·戈特曼*

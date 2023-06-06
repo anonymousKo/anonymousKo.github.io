@@ -1,3 +1,8 @@
+---
+title: JavaScript DOM编程艺术_note
+date: 2022-05-28
+---
+
 ***
 <div style="float:left">18 第 1 章　JavaScript简史</div><div style="float:right">Aug 06, 2021</div>
 
