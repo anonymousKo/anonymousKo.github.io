@@ -47,11 +47,3 @@ for root, dirs, files in os.walk("."):
             file_path = os.path.join(root, file)
             generate_metadata(file_path)
             
-# Stage the files you want to commit
-subprocess.run(["git", "add", "content/posts"])
-
-# Commit the changes
-subprocess.run(["git", "commit", "-m", "Add metadata"])
-
-# Push the changes
-subprocess.run(["git", "push"])
