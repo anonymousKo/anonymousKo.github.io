@@ -12,9 +12,8 @@ date: {}
 def has_metadata(file_path):
     try:
         with open(file_path, "r") as file:
-            content = file.read()
             
-        fm = frontmatter.loads(content)
+        fm = frontmatter.loads(file.read())
         print(f"metadata is {fm.metadata}")
         if fm.metadata:
             return True
