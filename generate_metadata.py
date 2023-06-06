@@ -1,5 +1,6 @@
 import os
 import frontmatter
+import subprocess
 
 metadata_template = """---
 title: {}
@@ -45,3 +46,5 @@ for root, dirs, files in os.walk("."):
         if file.endswith(".md"):
             file_path = os.path.join(root, file)
             generate_metadata(file_path)
+            
+    subprocess.run(["git", "status"])
