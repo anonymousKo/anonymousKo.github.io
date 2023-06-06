@@ -14,7 +14,6 @@ def has_metadata(file_path):
         with open(file_path, "r") as file:
             
             fm = frontmatter.loads(file.read())
-            print(f"metadata is {fm.metadata}")
             if fm.metadata:
                 return True
             else:
