@@ -15,6 +15,7 @@ def has_metadata(file_path):
 
     try:
         frontmatter.load(content)
+        print(f"metadata is {fm.metadata}")
         if fm.metadata:
             return True
         else:
