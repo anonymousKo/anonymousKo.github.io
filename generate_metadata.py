@@ -15,7 +15,10 @@ def has_metadata(file_path):
 
     try:
         frontmatter.load(content)
-        return True
+        if fm.metadata:
+            return True
+        else:
+            return False
     except Exception:
         return False
 
