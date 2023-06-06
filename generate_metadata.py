@@ -10,10 +10,10 @@ date: {}
 {}"""
 
 def has_metadata(file_path):
-    with open(file_path, "r") as file:
-        content = file.read()
-
     try:
+        with open(file_path, "r") as file:
+            content = file.read()
+            
         fm = frontmatter.load(content)
         print(f"metadata is {fm.metadata}")
         if fm.metadata:
@@ -21,6 +21,7 @@ def has_metadata(file_path):
         else:
             return False
     except Exception:
+        print(f"Error parsing frontmatter in file: {file_path}, Exception: {str(e)}")
         return False
 
 def generate_metadata(file_path):
