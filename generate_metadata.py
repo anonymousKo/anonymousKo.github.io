@@ -20,7 +20,7 @@ def has_metadata(file_path):
             return True
         else:
             return False
-    except Exception:
+    except Exception as e:
         print(f"Error parsing frontmatter in file: {file_path}, Exception: {str(e)}")
         return False
 
