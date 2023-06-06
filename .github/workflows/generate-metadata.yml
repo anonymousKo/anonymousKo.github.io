@@ -26,10 +26,7 @@ jobs:
       - name: Generate Metadata
         run: python generate_metadata.py  # Replace with the script name or command to generate metadata
         
-      - name: Commit and push changes
-        run: |
-          git config --local user.name "anonymousKo"
-          git config --local user.email "kore3019@gmail.com"
-          git add content/posts
-          git commit -m "Add metadata"
-          git push
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: '*.md'
+          disable_globbing: true
