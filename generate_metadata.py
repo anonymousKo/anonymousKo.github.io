@@ -13,12 +13,12 @@ def has_metadata(file_path):
     try:
         with open(file_path, "r") as file:
             
-        fm = frontmatter.loads(file.read())
-        print(f"metadata is {fm.metadata}")
-        if fm.metadata:
-            return True
-        else:
-            return False
+            fm = frontmatter.loads(file.read())
+            print(f"metadata is {fm.metadata}")
+            if fm.metadata:
+                return True
+            else:
+                return False
     except Exception as e:
         print(f"Error parsing frontmatter in file: {file_path}, Exception: {str(e)}")
         return False
