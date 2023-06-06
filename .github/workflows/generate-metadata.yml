@@ -26,7 +26,7 @@ jobs:
       - name: Generate Metadata
         run: python generate_metadata.py  # Replace with the script name or command to generate metadata
         
-#       - uses: stefanzweifel/git-auto-commit-action@v4
-#         with:
-#           file_pattern: '*.md'
-#           disable_globbing: true
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: '*.md'
+          disable_globbing: true
